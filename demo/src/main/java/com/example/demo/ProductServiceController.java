@@ -1,7 +1,9 @@
-package com.example;
+package com.example.demo;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.example.Product;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
@@ -26,6 +28,7 @@ public class ProductServiceController {
 
     @RequestMapping(value = "/products")
     public ResponseEntity<Object> getProduct() {
+        System.out.println("/products path");
         return new ResponseEntity<>(productRepo.values(), HttpStatus.OK);
     }
 }
