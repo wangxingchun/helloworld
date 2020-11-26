@@ -30,6 +30,7 @@ public class ProductServiceController {
     public ResponseEntity<Object> getProduct() {
         System.out.println("/products path");
         System.out.println("this is for master branch update");
+        System.out.println("this is test branch update");
         return new ResponseEntity<>(productRepo.values(), HttpStatus.OK);
     }
 }
